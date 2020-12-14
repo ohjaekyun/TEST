@@ -1,0 +1,28 @@
+원하는 소스폴더에서 마우스 우클릭하여 Git Bash Here 선택.->실행
+
+$ git config --global user.email "내 이메일", git config --global user.name "내 이름"
+ : 자기 정보 등록.
+
+$ git init 
+  :로컬 저장소 만들기
+$ git status
+ :폴더에서 파일들 확인. add하기전에는 빨간색. 하고나면 초록색.
+$ git add . (or  $ git add [파일명 또는 폴더명])
+ :Push하기 전단계.(staging) index로 옮기기.
+$ git rm --cached [파일명 또는 폴더명]
+ :인덱스에 추가된 파일 제외.
+$ git commit -m [설명]
+ :변경사항 확정.
+($ git commit -am [설명] : add와 commit을 동시에 함.)
+$ git log
+ :commit history 확인.
+$ git remote add origin [repository 주소]
+ :올릴 git 주소 복사(이때 ctrl+v는 불가능하니, 마우스 우클릭으로 붙여넣기할 것.)
+$ git push -u --force origin master
+
+$ git remote -v
+ :로컬저장소가 원격 저장소로 연결
+$ git push origin master
+ : commit해둔 파일들을 원격저장소에 업로드.git 
+
+$ git remote remove origin
